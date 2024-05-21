@@ -1,8 +1,7 @@
-/* General Body Styles */
 body {
-    background-color: #1e1e1e; /* Very dark grey, almost black */
-    color: #d9d9d9; /* Light grey text for readability */
-    font-family: Arial, sans-serif; /* Modern, clean font */
+    background-color: #f0f2f5; /* Light grey background similar to the screenshot */
+    color: #333; /* Dark text for contrast */
+    font-family: 'Arial', sans-serif; /* Professional, readable font */
     margin: 0;
     padding: 20px;
     display: flex;
@@ -13,29 +12,35 @@ body {
     box-sizing: border-box;
 }
 
-/* Heading Styles */
+.container {
+    width: 100%;
+    max-width: 960px; /* Optimal reading line length */
+    text-align: center;
+}
+
 h1 {
-    color: #ff7f50; /* Orange color for headings */
+    color: #007BFF; /* A professional blue, making it stand out */
+    margin-bottom: 20px;
 }
 
-/* Paragraph Styles */
-p {
-    color: #ccc; /* Lighter grey for paragraph text */
+.menu {
+    background-color: #ffffff; /* White background for the menu */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: inline-block;
 }
 
-/* Link Styles */
 a {
-    color: #fff; /* White color for better visibility */
-    text-decoration: none; /* Removes underline from links */
-    padding: 8px 15px;
-    background-color: #ff7f50; /* Orange background for links */
-    border-radius: 4px; /* Rounded corners for links */
-    margin-right: 10px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    color: #007BFF; /* Blue link color */
+    background-color: #e3e3e3; /* Light grey background for buttons */
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px; /* Softly rounded corners for buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
 }
 
-/* Link Hover Effects */
 a:hover {
-    background-color: #e76f51; /* A darker shade of orange for hover effect */
-    color: #fff; /* White text on hover for better visibility */
+    background-color: #c1c1c1; /* Slightly darker on hover for a subtle effect */
 }

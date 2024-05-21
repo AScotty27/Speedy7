@@ -1,7 +1,6 @@
-from django.shortcuts import render, redirect
-from decouple import config, Csv
-from django.http import HttpResponse
-from .services import Rapid7API
+from django.shortcuts import render
+import requests
+from django.conf import settings
 
 # Create your views here.
 def index(request):
@@ -20,5 +19,17 @@ def tomato_view(request):
     return render(request, 'tomato.html', context)
 
 def variables_view(request):
-    variables = Rapid7API.get_variables()
+    # Define the base URL for the API
+    base_url = "https://us.rest.logs.insight.rapid7.com/query/variables"
+    
+    # Define the headers using API key from settings
+    headers = {
+        'x-api-key': settings.RAPID7_API_KEY,
+        'Content-Type': 'application/json',
+    }
+    
+    # Make the API call
+    response = requests.get(base_url, headers=headers)
+    variables = response.json()
+    
     return render(request, 'variables.html', {'variables': variables})
